@@ -1,0 +1,14 @@
+query GetEventsForName {
+  events(
+    filter: {
+      typeId: { EQ: 35 }
+      name: { CONTAINS: $EVENT_NAME }
+      status: {
+        displayable: true
+      }
+    }
+  ) {
+    eventId
+    name
+  }
+}

@@ -1,0 +1,17 @@
+application:
+  namespace: bet-trading-local
+
+  image:
+    repository: docker.artifactory.euw.platformservices.io/sbg-tds-release/team-viewer-back-end
+    pullPolicy: IfNotPresent
+
+  jvm:
+    args: "-Xmx512m -Xms512m -Dspring.devtools.restart.enabled=false"
+
+  spring:
+    profiles:
+      active: local-log
+
+  env:
+    EVENTAPI_HOST: "events.test-aws.test4.skybet.net"
+    EVENTAPI_PATH: "/graphql"

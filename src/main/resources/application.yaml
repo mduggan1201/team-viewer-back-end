@@ -1,0 +1,25 @@
+# Values marked 'BY_ENV' are intended to be overwritten by an environment variable
+# e.g an env variable of SPRING_MAIN_BANNERMODE would overwrite spring.main.bannerMode
+
+server:
+  port: 8443
+
+management:
+  server:
+    port: 8091 #BY_ENV
+  endpoints:
+    web:
+      exposure:
+        include: metrics, health, prometheus
+
+auth:
+  jwkProviderUrl: . #BY_ENV
+  issuerUrl: . #BY_ENV
+  testEnvSkipValidate: true #BY_ENV
+
+eventapi:
+  host: "events.test-aws.test4.skybet.net"
+  path: "/graphql"
+
+sbg:
+  truststorePassword: "." #BY_ENV

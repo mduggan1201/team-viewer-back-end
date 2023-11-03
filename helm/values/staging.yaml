@@ -1,0 +1,12 @@
+application:
+
+  routing:
+    hosts:
+      - trading.test-aws.staging.skybet.net
+
+  env:
+    AUTH_JWKPROVIDERURL: "https://login.microsoftonline.com/5d4574b6-e3f6-4198-ba5c-fee9d1d1ad5b/discovery/v2.0/keys"
+    AUTH_ISSUERURL: "https://login.microsoftonline.com/5d4574b6-e3f6-4198-ba5c-fee9d1d1ad5b/v2.0"
+    AUTH_TESTENVSKIPVALIDATE: "true"
+    EVENTAPI_HOST: "events.test-aws.staging.skybet.net"
+    EVENTAPI_PATH: "/graphql"
